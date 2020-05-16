@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>João Cruz</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700&display=swap">
+    <link href="styles/output.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="bg-orange-300">
+
+    <div id="app" class="flex text-indigo-800">
+        <div class="w-1/5 flex flex-col h-screen justify-center p-16">
+            <router-link
+                    class="text-4xl font-semibold transition-opacity ease-out duration-1000"
+                    active-class="border-b-2 border-indigo-800"
+                    :to="{ name: 'welcome' }"
+                    exact
+            >
+                Welcome
+            </router-link>
+            <router-link
+                    class="text-4xl font-semibold"
+                    active-class="border-b-2 border-indigo-800"
+                    :to="{ name: 'profile' }"
+                    exact
+            >
+                Profile
+            </router-link>
+
+            <router-link
+                    class="text-4xl font-semibold"
+                    active-class="border-b-2 border-indigo-800"
+                    :to="{ name: 'projects' }"
+                    exact
+            >
+                Projects
+            </router-link>
+
+            <router-link
+                    class="text-4xl font-semibold"
+                    active-class="border-b-2 border-indigo-800"
+                    :to="{ name: 'contacts' }"
+                    exact
+            >
+                Contacts
+            </router-link>
+        </div>
+
+        <div class="w-4/5 mt-56">
+            <router-view></router-view>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../dist/bundle.js"></script>
+</body>
+</html>
