@@ -5,53 +5,80 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>João Cruz</title>
+    <title>
+        João Cruz | Just a dev...
+    </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700&display=swap">
     <link href="styles/output.css" type="text/css" rel="stylesheet" />
 </head>
 
-<body class="bg-orange-300">
+<body class="bg-orange-300 flex">
 
-    <div id="app" class="flex text-indigo-800">
-        <div class="w-1/5 flex flex-col h-screen justify-center p-16">
-            <router-link
-                    class="text-4xl font-semibold transition-opacity ease-out duration-1000"
-                    active-class="border-b-2 border-indigo-800"
-                    :to="{ name: 'welcome' }"
-                    exact
-            >
-                Welcome
-            </router-link>
-            <router-link
-                    class="text-4xl font-semibold"
-                    active-class="border-b-2 border-indigo-800"
-                    :to="{ name: 'profile' }"
-                    exact
-            >
-                Profile
-            </router-link>
+    <div id="app" class="flex flex-col xl:flex-row text-indigo-800 w-screen">
+        <div :class="sidebarOpen ? 'block' : 'hidden'" class="fixed inset-0 bg-black opacity-50 xl:hidden" @click="sidebarOpen = false"></div>
+        <div :class="sidebarOpen ? 'transform translate-x-0 transition duration-300 ease-out' : 'transform -translate-x-full transition duration-300 ease-in'"
+             class="fixed inset-y-0 flex flex-col h-screen p-8 bg-orange-300 border-r border-indigo-800 space-y-4 xl:static xl:inset-auto xl:translate-x-0 md:p-16 xl:w-1/5 xl:border-0">
 
-            <router-link
-                    class="text-4xl font-semibold"
-                    active-class="border-b-2 border-indigo-800"
-                    :to="{ name: 'projects' }"
-                    exact
-            >
-                Projects
-            </router-link>
+            <div class="w-full flex justify-end text-indigo-800 xl:hidden">
+                <button @click="sidebarOpen = false">
+                    <svg class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
+                    </svg>
+                </button>
+            </div>
 
-            <router-link
-                    class="text-4xl font-semibold"
-                    active-class="border-b-2 border-indigo-800"
-                    :to="{ name: 'contacts' }"
-                    exact
-            >
-                Contacts
-            </router-link>
+            <div class="h-full flex flex-col justify-center">
+                <router-link
+                        class="text-4xl font-semibold border-b-2 border-orange-300"
+                        active-class="border-indigo-800"
+                        :to="{ name: 'welcome' }"
+                        exact
+                >
+                    Welcome
+                </router-link>
+
+                <router-link
+                        class="text-4xl font-semibold border-b-2 border-orange-300"
+                        active-class="border-indigo-800"
+                        :to="{ name: 'profile' }"
+                        exact
+                >
+                    Profile
+                </router-link>
+
+                <router-link
+                        class="text-4xl font-semibold border-b-2 border-orange-300"
+                        active-class="border-indigo-800"
+                        :to="{ name: 'projects' }"
+                        exact
+                >
+                    Projects
+                </router-link>
+
+                <router-link
+                        class="text-4xl font-semibold border-b-2 border-orange-300"
+                        active-class="border-indigo-800"
+                        :to="{ name: 'contacts' }"
+                        exact
+                >
+                    Contacts
+                </router-link>
+            </div>
+
         </div>
 
-        <div class="w-4/5 mt-56">
-            <router-view></router-view>
+        <div>
+            <button class="text-indigo-800 xl:hidden p-4" @click="sidebarOpen = true">
+                <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="xl:w-4/5">
+<!--            <transition name="page-content">-->
+                <router-view></router-view>
+<!--            </transition>-->
         </div>
     </div>
 

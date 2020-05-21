@@ -3,3 +3,30 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+
+.page-content-enter-active, .page-content-leave-active {
+    transition: transform .8s ease-out;
+}
+
+.page-content-enter {
+    transform: translateY(100%);
+}
+
+.page-content-enter-to {
+    transform: translateY(-100%);
+}
+
+.page-content-leave {
+    transform: translateY(0);
+}
+
+.page-content-leave-to {
+    transform: translateY(-100%);
+}
+
+.link-enter-active, .link-leave-active {
+    transition-property: color;
+    transition-duration: 1s;
+}
+

@@ -1,9 +1,9 @@
 <template>
-    <div class="flex ">
-        <div class="flex flex-col">
-            <h3 class="text-4xl font-semibold">Contacts</h3>
+    <div class="flex flex-col xl:flex-row h-full items-center">
+        <div class="flex flex-col w-full p-4">
+            <h3 class="text-2xl lg:text-3xl font-semibold">Contacts</h3>
 
-            <p class="mt-6 text-3xl">
+            <p class="mt-6 text-xl lg:text-2xl">
                 You can find me on
                 <a class="font-semibold underline" href="https://twitter.com/JoaoFSCruz">Twitter</a>
                 (although I'm only there to get some tips) and on
@@ -13,24 +13,24 @@
                 .
             </p>
 
-            <p class="mt-6 text-3xl">
+            <p class="mt-6 text-xl lg:text-2xl">
                 You can also send an email to
                 <span class="font-semibold underline cursor-pointer" v-on:mouseenter="" v-on:click="copy">
-                {{ emailAddress }}
+                    {{ emailAddress }}
                 </span>,
                 or use the form below:
             </p>
 
             <div class="mt-4">
-                <span class="text-lg font-semibold tracking-wider rounded-full bg-indigo-800 text-white px-2 py-1">
+                <span class="text-sm xl:text-lg font-semibold tracking-wider rounded-full bg-indigo-800 text-white px-4 py-1">
                     {{ tooltip }}
                 </span>
             </div>
 
-            <div class="mt-32 flex">
-                <form @submit="checkForm" :action="mailTo" class="rounded bg-white w-1/2 flex flex-col px-10 py-8">
+            <div class="mt-10 flex flex-col justify-center items-center lg:flex-row xl:justify-start">
+                <form @submit="checkForm" :action="mailTo" class="flex flex-col bg-white w-11/12 md:w-7/12 xl:w-5/12 p-8 flex-shrink">
 
-                    <h3 class="text-3xl">Send an email</h3>
+                    <h3 class="text-2xl lg:text-3xl">Send an email</h3>
 
                     <label for="email" class="mt-4 flex flex-col">
                         <span class="text-lg p-1">Email</span>
@@ -54,13 +54,13 @@
                                 required/>
                     </label>
 
-                    <button class="mt-8 rounded bg-indigo-700 text-white text-2xl p-2 hover:bg-indigo-800 font-semibold tracking-wide">
+                    <button class="mt-8 rounded bg-indigo-700 text-white text-xl md:text-2xl p-2 hover:bg-indigo-800 font-semibold tracking-wide w-full">
                         Send
                     </button>
                 </form>
 
-                <div class="ml-64">
-                    <img src="../assets/imgs/undraw_mail_box_kd5i.svg" alt="">
+                <div class="flex items-center justify-center w-2/5 mt-8 lg:mt-0">
+                    <img class="w-3/5" src="../assets/imgs/undraw_mail_box_kd5i.svg" alt="">
                 </div>
             </div>
 

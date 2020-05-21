@@ -13,6 +13,18 @@ import Contacts from "./Contacts.vue";
 let app = new Vue({
     el: '#app',
 
+    data() {
+        return {
+            sidebarOpen: false
+        }
+    },
+
+    watch:{
+        $route (to, from){
+            this.sidebarOpen = false;
+        }
+    },
+
     router: new VueRouter({
         mode: 'history',
 
