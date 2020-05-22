@@ -61,7 +61,7 @@
 
         </div>
         <div class="flex justify-center p-10">
-            <img class="border border-indigo-800 w-1/3 xl:w-2/3" src="https://images.unsplash.com/photo-1586297098710-0382a496c814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80&fit=facearea&h=600&w=600&facepad=2.75" alt="">
+            <img class="border border-indigo-800 md:transform md:scale-150" src="https://avatars3.githubusercontent.com/u/26048679?s=400&u=1f4b9c25decc4b163762324d36e89f1d6ca52980&v=4" alt="">
         </div>
     </div>
 </template>

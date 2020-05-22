@@ -4,29 +4,29 @@
 
 @import "tailwindcss/utilities";
 
-
-.page-content-enter-active, .page-content-leave-active {
-    transition: transform .8s ease-out;
+.page-enter-active, .page-leave-active {
+    transition: opacity 700ms, transform 700ms;
 }
 
-.page-content-enter {
-    transform: translateY(100%);
+.page-enter, .page-leave-to {
+    opacity: 0;
+    transform: translateY(-30%);
 }
 
-.page-content-enter-to {
-    transform: translateY(-100%);
+.page-leave-to {
+    opacity: 0;
+    transform: translateY(30%);
 }
 
-.page-content-leave {
-    transform: translateY(0);
+.menu-link {
+    @apply .text-4xl .font-semibold;
 }
 
-.page-content-leave-to {
-    transform: translateY(-100%);
+.menu-link:after {
+    @apply .block .border-solid .border-b-2 .border-indigo-800 .transition-transform .duration-500 .ease-in-out .transform .scale-x-0 .origin-left;
+    content: '';
 }
 
-.link-enter-active, .link-leave-active {
-    transition-property: color;
-    transition-duration: 1s;
+.menu-link:hover:after, .menu-link.selected:after {
+    @apply .transform .scale-x-100 .origin-left;
 }
-

@@ -29,39 +29,39 @@
 
             <div class="h-full flex flex-col justify-center">
                 <router-link
-                        class="text-4xl font-semibold border-b-2 border-orange-300"
-                        active-class="border-indigo-800"
+                        class="menu-link"
+                        active-class="menu-link selected"
                         :to="{ name: 'welcome' }"
                         exact
                 >
-                    Welcome
+                    <span class="p-2">Welcome</span>
                 </router-link>
 
                 <router-link
-                        class="text-4xl font-semibold border-b-2 border-orange-300"
-                        active-class="border-indigo-800"
+                        class="menu-link"
+                        active-class="menu-link selected"
                         :to="{ name: 'profile' }"
                         exact
                 >
-                    Profile
+                    <span class="p-2">Profile</span>
                 </router-link>
 
                 <router-link
-                        class="text-4xl font-semibold border-b-2 border-orange-300"
-                        active-class="border-indigo-800"
+                        class="menu-link"
+                        active-class="menu-link selected"
                         :to="{ name: 'projects' }"
                         exact
                 >
-                    Projects
+                    <span class="p-2">Projects</span>
                 </router-link>
 
                 <router-link
-                        class="text-4xl font-semibold border-b-2 border-orange-300"
-                        active-class="border-indigo-800"
+                        class="menu-link"
+                        active-class="menu-link selected"
                         :to="{ name: 'contacts' }"
                         exact
                 >
-                    Contacts
+                    <span class="p-2">Contacts</span>
                 </router-link>
             </div>
 
@@ -76,10 +76,11 @@
         </div>
 
         <div class="xl:w-4/5">
-<!--            <transition name="page-content">-->
+            <transition name="page" mode="out-in">
                 <router-view></router-view>
-<!--            </transition>-->
+            </transition>
         </div>
+
     </div>
 
     <script type="text/javascript" src="../dist/bundle.js"></script>

@@ -2,8 +2,10 @@ import '../styles/app.css';
 
 import Vue from 'vue'
 import VueRouter from 'vue-router';
+import axios from 'axios'
 
 Vue.use(VueRouter);
+window.axios = axios;
 
 import Welcome from "./Welcome.vue";
 import Profile from "./Profile.vue";
@@ -26,8 +28,6 @@ let app = new Vue({
     },
 
     router: new VueRouter({
-        mode: 'history',
-
         routes:[
             {
                 path: '/',
