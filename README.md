@@ -1,5 +1,7 @@
 # My personal website files
 
+You can visit it at: https://joaofscruz.github.io/#/
+
 Technologies used:
 
 - Vue.js
