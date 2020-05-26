@@ -19,7 +19,7 @@
             <div>
                 <h4 class="text-2xl lg:text-3xl font-semibold">
                     Socrates
-                    <span class="text-base uppercase font-semibold">(Under Development)</span>
+                    <span class="text-base uppercase font-semibold">(Coming soon)</span>
                 </h4>
 
                 <p class="text-xl lg:text-2xl">
