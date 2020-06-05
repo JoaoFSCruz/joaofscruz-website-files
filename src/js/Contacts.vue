@@ -7,7 +7,7 @@
                 You can find me on
                 <a class="font-semibold underline" href="https://github.com/JoaoFSCruz">Github</a>, on
                 <a class="font-semibold underline" href="https://twitter.com/JoaoFSCruz">Twitter</a>
-                (although I'm only there to get some tips and get updated with new content) and on
+                and on
                 <a class="font-semibold underline" href="https://www.linkedin.com/in/jo%C3%A3o-cruz-0a2936135/">
                     LinkedIn
                 </a>
